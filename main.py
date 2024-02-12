@@ -6,7 +6,7 @@ import sorting
 pygame.init()
 WIDTH = 1700
 HEIGHT = 1100
-RECT_WIDTH = 50
+RECT_WIDTH = 20
 PRINT_DELAY = 0.1
 dt = 0
 running = True

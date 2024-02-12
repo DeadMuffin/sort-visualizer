@@ -24,13 +24,15 @@ def show(arr, rect_width, screen, delay, cur_col):
 
 
 def bubble_sort(arr, rect_width, screen, delay):
+    sorted_arleady = []
     n = len(arr)
     for i in range(0, n - 1):
         for j in range(0, n - i - 1):
-            show(arr, rect_width, screen, delay, [(j, "red"), (n - i, "green")])
+            sorted_arleady.append((n-i, "green"))
+            show(arr, rect_width, screen, delay, [(j, "red")] + sorted_arleady)
             if arr[j] > arr[j + 1]:
                 swap(arr, j, j + 1)
-    show(arr, rect_width, screen, delay, [(0, "green")])
+    show(arr, rect_width, screen, delay, sorted_arleady + [(0, "green"), (1, "green")])
 
 
 def insertion_sort(arr, rect_width, screen, delay):
@@ -57,7 +59,7 @@ def selection_sort(arr, rect_width, screen, delay):
                 mini = (j, arr[j])
         swap(arr, i, mini[0])
         already_sorted.append((i, "green"))
-    show(arr, rect_width, screen, delay, [(n - 1, "green")])
+    show(arr, rect_width, screen, delay, already_sorted)
 
 
 def quick_sort(arr, rect_width, screen, delay):
