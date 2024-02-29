@@ -21,6 +21,10 @@ def show(arr, rect_width, screen, delay, cur_col):
 
     pygame.display.flip()
     time.sleep(delay)
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            pygame.quit()
+            exit()
 
 
 def bubble_sort(arr, rect_width, screen, delay):
@@ -126,9 +130,20 @@ def merge_sort(arr, rect_width, screen, delay):
     show(arr, rect_width, screen, delay, [(num, "green") for num in range(len(arr))])
 
 
-def heap_sort():
+def heap_sort(arr, rect_width, screen, delay):
     pass
 
 
-def radix_sort():
+def radix_sort(arr, rect_width, screen, delay):
     pass
+
+
+sorting_functions = {
+    "Bubble Sort": bubble_sort,
+    "Insertion Sort": insertion_sort,
+    "Selection Sort": selection_sort,
+    "Quick Sort": quick_sort,
+    "Merge Sort": merge_sort,
+    "Heap Sort": heap_sort,
+    "Radix Sort": radix_sort
+}
