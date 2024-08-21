@@ -68,7 +68,6 @@ def sort(width, height, screen):
         heightMap.append(random.randrange(int(height / 10), height))
 
     pygame.display.set_caption(func[0][0])
-    print(rect_width)
     sorting.show(heightMap, rect_width, screen, 0, [])
     sorting.sorting_functions[func[0][0]](heightMap, rect_width, screen, print_delay)
     pygame.time.wait(2000)

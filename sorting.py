@@ -144,6 +144,6 @@ sorting_functions = {
     "Selection Sort": selection_sort,
     "Quick Sort": quick_sort,
     "Merge Sort": merge_sort,
-    "Heap Sort": heap_sort,
-    "Radix Sort": radix_sort
+    #"Heap Sort": heap_sort,
+    #"Radix Sort": radix_sort
 }
